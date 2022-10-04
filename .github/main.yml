@@ -18,7 +18,9 @@ jobs:
 
       - name: Configure AWS Credentials
 
-        uses: aws-actions/configure-aws-credentials@v1
+        #uses: aws-actions/configure-aws-credentials@v1
+
+        uses: actions/configure-aws-credentials@master
 
       - permissions:
         
