@@ -20,13 +20,13 @@ jobs:
 
         #uses: aws-actions/configure-aws-credentials@v1
 
-        uses: actions/configure-aws-credentials@master
+        uses: aws-actions/configure-aws-credentials@b8c74de
 
       - permissions:
         
         id-token: write
         
-        contents: read  
+        contents: write
 
         with:
 
