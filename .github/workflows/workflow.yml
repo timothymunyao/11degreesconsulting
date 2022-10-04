@@ -1,16 +1,18 @@
-name: Upload to S3 Bucket
+name: Deploy for preview
 
 on:
   push:
     branches:
-    - main
+      - main
 
 jobs:
-  upload:
+  preview:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@main
-      - uses: timothymunyao/11degreesconsulting/@main
+      - uses: timothymunyao/11degreesconsulting@main
+        name: Upload S3
+        id: S3
         with:
           aws_key_id: ${{ secrets.AWS_KEY }}
           aws_secret_access_key: ${{ secrets.AWS_SECRET}}
