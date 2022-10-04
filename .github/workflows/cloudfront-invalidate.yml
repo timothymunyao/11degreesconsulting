@@ -28,10 +28,6 @@ jobs:
 
           aws-region: ${{ secrets.AWS_REGION }}
 
-      - name: Build static site
-
-        run: npm install && npm run build
-
       - name: Deploy static site to S3 bucket
 
         run: aws s3 sync dist/ s3://${{ secrets.AWS_BUCKET }}
