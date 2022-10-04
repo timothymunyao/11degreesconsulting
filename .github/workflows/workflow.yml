@@ -1,0 +1,15 @@
+name: Upload to S3
+
+on: [pull_request]
+
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@main
+      - uses: timothymunyao/11degreesconsulting/@main
+        with:
+          aws_key_id: ${{ secrets.AWS_KEY }}
+          aws_secret_access_key: ${{ secrets.AWS_SECRET}}
+          aws_bucket: ${{ secrets.team11degrees.com }}
+          source_dir: '/home/timothy/PhpstormProjects/11degreesconsulting'
