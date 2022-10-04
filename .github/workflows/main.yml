@@ -20,12 +20,10 @@ jobs:
 
         uses: aws-actions/configure-aws-credentials@v1
 
-
-
       - permissions:
-        
+
           id-token: write
-        
+
           contents: write
 
         with:
