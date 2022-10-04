@@ -24,9 +24,9 @@ jobs:
 
       - permissions:
         
-        id-token: write
+          id-token: write
         
-        contents: write
+          contents: write
 
         with:
 
