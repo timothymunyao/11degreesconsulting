@@ -1,0 +1,13 @@
+name: AWS CodePipeline Trigger
+# You may pin to the exact commit or the version.
+# uses: zulhfreelancer/aws-codepipeline-action@492467f78d67ac2301e55e208326a8e9fbd23284
+uses: zulhfreelancer/aws-codepipeline-action@v1.0.7
+with:
+  # AWS Region where the CodePipeline is located
+  aws-region:
+  # AWS Access Key ID to trigger CodePipeline
+  aws-access-key:
+  # AWS Secret Key to trigger CodePipeline
+  aws-secret-key:
+    # The name of the pipeline
+  pipeline-name:
