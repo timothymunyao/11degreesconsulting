@@ -36,4 +36,4 @@ jobs:
 
         # run: aws cloudfront create-invalidation --distribution-id ${{ secrets.AWS_DISTRIBUTION_ID }} --paths "/*"
 
-        run: aws cloudfront create-invalidation --distribution-id ${{ secrets.CLF_DISTRIBUTION_ID }} --paths "/*"
+        run: aws cloudfront create-invalidation --distribution-id E2QYRM5SBMAO5P --paths "/*"
