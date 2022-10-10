@@ -317,19 +317,19 @@
   <script>
     function invokeAWSAPI(e) {
       e.preventDefault();
-      var fname = $("#fname").val();
-      var lname = $("#lname").val();
-      var email = $("#email").val();
-      var message = $("#message").val();
+      var name = $("#form-name").val();
+      var phone = $("#form-phone").val();
+      var email = $("#form-email").val();
+      var msg = $("#form-message").val();
       var data = {
-        fname : fname,
-        lname : lname,
+        name : name,
+        phone : phone,
         email : email,
-        message : message
+        msg : msg
       };
       $.ajax({
         type: "POST",
-        url : "https://pbfzohycif.execute-api.eu-west-1.amazonaws.com/TestingStage/11degreescontactform",
+        url : "https://pbfzohycif.execute-api.eu-west-1.amazonaws.com/TestingStage",
         dataType: "json",
         crossDomain: "true",
         contentType: "application/json; charset=utf-8",
