@@ -314,36 +314,8 @@
   <script>
     document.addEventListener('contextmenu', event => event.preventDefault());
   </script>
-  <script>
-    function invokeAWSAPI(e) {
-      e.preventDefault();
-      var name = $("#form-name").val();
-      var phone = $("#form-phone").val();
-      var email = $("#form-email").val();
-      var msg = $("#form-message").val();
-      var data = {
-        name : name,
-        phone : phone,
-        email : email,
-        msg : msg
-      };
-      $.ajax({
-        type: "POST",
-        url : "https://pbfzohycif.execute-api.eu-west-1.amazonaws.com/TestingStage",
-        dataType: "json",
-        crossDomain: "true",
-        contentType: "application/json; charset=utf-8",
-        data: JSON.stringify(data),
-        success: function () {
-          alert("Successful");
-          document.getElementById("contact-form").reset();
-          location.reload();
-        },
-        error: function () {
-          alert("unsuccessful");
-        }});
-    }
-  </script>
+  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
 
 </body>
 </html>
