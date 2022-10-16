@@ -38,6 +38,10 @@ jobs:
 
           aws-region: ${{ secrets.AWS_REGION }}
 
+      - name: Identity Check
+
+        run: aws sts get-caller-identity
+
       - name: Release CodePipeline
 
         run: aws codepipeline start-pipeline-execution --name team11degrees.com
