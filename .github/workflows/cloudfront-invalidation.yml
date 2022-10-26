@@ -55,3 +55,7 @@ jobs:
       - name: Invalidate images cache
 
         run: aws cloudfront create-invalidation --distribution-id ${{ env.AWS_CLOUDFRONT }} --paths "/images/*"
+
+      - name: Invalidate css cache
+
+        run: aws cloudfront create-invalidation --distribution-id ${{ env.AWS_CLOUDFRONT }} --paths "/css/*"
