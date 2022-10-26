@@ -40,22 +40,22 @@ jobs:
 
       - name: Identity Check
 
-        run: aws sts get-caller-identity >> $GITHUB_ENV
+        run: aws sts get-caller-identity
 
       - name: Release CodePipeline
 
-        run: aws codepipeline start-pipeline-execution --name team11degrees.com >> $GITHUB_ENV
+        run: aws codepipeline start-pipeline-execution --name team11degrees.com
 
       - name: Invalidate cache
 
         # run: aws cloudfront create-invalidation --distribution-id ${{ secrets.AWS_DISTRIBUTION_ID }} --paths "/*"
 
-        run: aws cloudfront create-invalidation --distribution-id ${{ env.AWS_CLOUDFRONT }} --paths "/*" >> $GITHUB_ENV
+        run: aws cloudfront create-invalidation --distribution-id ${{ env.AWS_CLOUDFRONT }} --paths "/*"
 
       - name: Invalidate images cache
 
-        run: aws cloudfront create-invalidation --distribution-id ${{ env.AWS_CLOUDFRONT }} --paths "/images/*" >> $GITHUB_ENV
+        run: aws cloudfront create-invalidation --distribution-id ${{ env.AWS_CLOUDFRONT }} --paths "/images/*"
 
       - name: Invalidate css cache
 
-        run: aws cloudfront create-invalidation --distribution-id ${{ env.AWS_CLOUDFRONT }} --paths "/css/*" >> $GITHUB_ENV
+        run: aws cloudfront create-invalidation --distribution-id ${{ env.AWS_CLOUDFRONT }} --paths "/css/*"
