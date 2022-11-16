@@ -173,14 +173,14 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
   .site-nav h1 {
     margin: 0;
     padding: 0;
-    font-size: 24px; }
+    font-size: 48px; }
   .site-nav .site-navigation .site-menu {
     margin-left: 90px;
     margin-bottom: 0; }
     .site-nav .site-navigation .site-menu > li {
       display: inline-block; }
       .site-nav .site-navigation .site-menu > li > a {
-        font-size: 14px;
+        font-size: 18px;
         padding: 10px 15px;
         color: rgba(0, 0, 0, 0.7);
         display: inline-block;
