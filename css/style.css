@@ -1255,7 +1255,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
   margin-bottom: 10px;
   border-radius: 7px; }
   .service-2.link .service-contents {
-    color: #939393; }
+    color: #000000; }
     .service-2.link .service-contents *:last-child {
       margin-bottom: 0; }
   .service-2.link:hover, .service-2.link.active {
