@@ -24,7 +24,7 @@ jobs:
 
     steps:
 
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       - name: Configure AWS Credentials
 
@@ -38,6 +38,10 @@ jobs:
 
           aws-region: ${{ secrets.AWS_REGION }}
 
+      - name: Identity Check
+
+        run: aws sts get-caller-identity
+
       - name: Release CodePipeline
 
         run: aws codepipeline start-pipeline-execution --name team11degrees.com
@@ -47,3 +51,11 @@ jobs:
         # run: aws cloudfront create-invalidation --distribution-id ${{ secrets.AWS_DISTRIBUTION_ID }} --paths "/*"
 
         run: aws cloudfront create-invalidation --distribution-id ${{ env.AWS_CLOUDFRONT }} --paths "/*"
+
+      - name: Invalidate images cache
+
+        run: aws cloudfront create-invalidation --distribution-id ${{ env.AWS_CLOUDFRONT }} --paths "/images/*"
+
+      - name: Invalidate css cache
+
+        run: aws cloudfront create-invalidation --distribution-id ${{ env.AWS_CLOUDFRONT }} --paths "/css/*"
